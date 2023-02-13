@@ -1,7 +1,5 @@
 /* este tipo se usa para funciones que sabes que nunca van a terminar */
 
-import { type } from 'os';
-
 /* esta funcion nunca termina */
 const withoutEnd = () => {
   while (true) {
@@ -19,6 +17,7 @@ const ejemplo = (input: unknown) => {
   } else if (typeof input === 'number') {
     return 'Es un numero';
   } else if (Array.isArray(input)) {
+    return 'Es un Array';
   }
   return fail('no hay nada');
 };
