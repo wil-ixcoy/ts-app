@@ -4,13 +4,13 @@
 
 /* los enums sirven para tipas de que tipo de dato puede enviar un usuario a nuestra funcion,
 evitando que envie otro valor */
-enum ROLES {
+export enum ROLES {
   ADMIN = 'administrador',
   VENDEDOR = 'seller',
   CUSTOMER = 'customer',
 }
 
-type User = {
+export type User = {
   name: string;
   role: ROLES;
 };
