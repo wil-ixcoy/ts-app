@@ -9,6 +9,7 @@ const create = addProduct({
   category: {
     id: 12,
     name: 'Zapatos deportivos',
+    createdAt: new Date()
   },
 });
 
