@@ -19,7 +19,7 @@ Una de las funcionalidades de interface y la que los diferencia es que se puede 
 mientras que type no.
 */
 
-type Product = {
+type Productos = {
   id: string | number;
   title: string;
   createdAt: Date;
@@ -27,7 +27,7 @@ type Product = {
   size?: string;
 };
 
-interface Producto {
+interface Product {
   id: string | number;
   title: string;
   createdAt: Date;
@@ -35,7 +35,7 @@ interface Producto {
   size?: string;
 }
 
-const products: Producto[] = [];
+const products: Product[] = [];
 
 products.push({
   id: 1,
