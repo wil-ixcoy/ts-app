@@ -7,8 +7,14 @@ type Sizes = 'S' | 'M' | 'L' | 'XL';
 los tendrá toda interface a la se extienda */
 export interface Product extends BaseModel {
   title: string;
+  image:string;
+  description:string;
   stock: number;
   size?: Sizes;
+  color:string;
+  price:number;
   /* se usa la interfaz de category */
   category: Category;
+  isNew: boolean;
+  tags:string[];
 }
