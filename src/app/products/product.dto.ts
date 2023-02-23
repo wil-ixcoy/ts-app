@@ -39,5 +39,11 @@ type example2 = Required<Product>
 type example3 = Readonly<Product>
 
 /* uso de dos DTOs, Partial para que sea opcional y Readonly para que sea solo de lectura */
-export interface FindProductDTO extends Readonly<Partial<Product>>{}
+export interface FindProductDTO2 extends Readonly<Partial<Product>>{}
+
+
+export interface FindProductDTO extends Readonly<Partial<Omit<Product,"tags">>>{
+  /* no permite mutacion ni reasignacion*/
+  readonly tags: ReadonlyArray<string>
+}
 

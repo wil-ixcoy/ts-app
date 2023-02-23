@@ -27,5 +27,6 @@ updateProduct(product.id,{
 
 /* obtener */
 findProducts({
-  stock:12
+  stock:12,
+  tags:["as","dfg"]
 })

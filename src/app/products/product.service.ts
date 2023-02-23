@@ -41,6 +41,13 @@ export function updateProduct(id: Product["id"], changes: updateProductDTO): Pro
 }
 
 export function findProducts(dto: FindProductDTO): Product[] {
+  /* no permite editar por el DTO
+  dto.tags = []*/
+
+  /* pero si permite mutar a traves de funciones */
+/*   dto.tags?.push("Nuevo valor que permite") */
+
+/* agregando mas utilitie types se evia eso */
   return products;
 }
 
