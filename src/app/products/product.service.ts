@@ -27,7 +27,10 @@ export const addProduct = (data: createProductDTO): Product => {
 export async function listProduct() {}
 export async function getProduct(id: string) {}
 
-export function updateProduct(id: string, changes: updateProductDTO): Product {
+
+/* con Product["id"] se obtiene el typo que sea id, no importa que sea string, boolean
+o cualquier otro tipo que cambien desde el base.model */
+export function updateProduct(id: Product["id"], changes: updateProductDTO): Product {
   const index = products.findIndex((item) => item.id == id);
   const prevData = products[index];
   products[index] = {
@@ -40,4 +43,6 @@ export function updateProduct(id: string, changes: updateProductDTO): Product {
 export function findProducts(dto: FindProductDTO): Product[] {
   return products;
 }
+
+
 export async function deleteProduct(id: string) {}
