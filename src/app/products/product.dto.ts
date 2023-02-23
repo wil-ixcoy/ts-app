@@ -5,6 +5,7 @@ Omit: Se omiten valores que existen en una interfaz
 Pick: Agrega los valores que se van a mostrar
 Partial: pone opcionales a todos los valores
 Required: se requiren todos los valores
+Readonly: Solo de lectura
 
 */
 
@@ -33,3 +34,10 @@ export interface updateProductDTO extends Partial<createProductDTO>{
 /* El contrario a Partial es Required, requiere todos los campos  */
 
 type example2 = Required<Product>
+
+/* solo de lectura */
+type example3 = Readonly<Product>
+
+/* uso de dos DTOs, Partial para que sea opcional y Readonly para que sea solo de lectura */
+export interface FindProductDTO extends Readonly<Partial<Product>>{}
+
